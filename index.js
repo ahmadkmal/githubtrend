@@ -54,5 +54,5 @@ app.get('/api/developers', function (req, res) {
 app.get('*', function (req, res) {
   res.sendFile(path.join(__dirname, 'build', 'index.html'),options);
 });
-const PORT = process.env.REACT_APP_PORT
+const PORT = process.env.PORT || 5000
 app.listen(PORT, () => console.log(`Listening on ${PORT}`));
